@@ -1,0 +1,139 @@
+mainScreen:
+
+
+
+<mainScreen>:
+
+    btn0:   btn0
+    btn1:   btn1
+    btn2:   btn2
+    btn3:   btn3
+    btn4:   btn4
+    btn5:   btn5
+    btn6:   btn6
+    btn7:   btn7
+    btn8:   btn8
+
+    label:label
+
+    colorBtns: 0,0,127/255
+
+
+
+    orientation:"vertical"
+
+    MDLabel:
+        id:label
+        text:""
+        pos_hint:{'center_x':.5, 'center_y': .95}
+        halign: "center"
+        theme_text_color: "Custom"
+
+
+    MDGridLayout:
+        cols:    3
+        spacing: 20
+        padding: [20,10]
+        pos_hint:{'center_x': .8, 'center_y':.1 }
+
+        MDRaisedButton:
+            text:""
+            id: btn0
+            position: 0
+            size_hint:None,None
+
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+                print(app.theme_cls.primary_color)
+
+
+        MDRaisedButton:
+            id: btn1
+            text:""
+
+
+            position: 1
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn2
+            position: 2
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn3
+            position: 3
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn4
+            position: 4
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn5
+            position: 5
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+        MDRaisedButton:
+            text:""
+            id: btn6
+            position: 6
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn7
+            position: 7
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+        MDRaisedButton:
+            text:""
+            id: btn8
+            position: 8
+            on_release:
+                root.btnPressed(self)
+                root.checkResult()
+                root.ai()
+                root.checkResult()
+
+    MDRaisedButton:
+        pos_hint:{'center_x':.5, 'center_y':.05}
+        size_hint_x: .8
+        text:"Begin"
+        on_release:
+            root.restart()
